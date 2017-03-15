@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns="http://www.omg.org/spec/DMN/20151101/dmn11.xsd" id="definitions" name="definitions" namespace="http://camunda.org/schema/1.0/dmn">
+  <dmn:decision id="mitarbeiter" name="Mitarbeiter ermitteln">
+    <dmn:decisionTable id="decisionTable" hitPolicy="FIRST">
+      <dmn:input id="input1" label="Kontext der Dienstreise">
+        <dmn:inputExpression id="inputExpression1" typeRef="string">        <dmn:text>reiseKontext</dmn:text>
+</dmn:inputExpression>
+        <dmn:inputValues id="UnaryTests_1axboru">        <dmn:text><![CDATA["Abordnung","Aus-/Fortbildung","Aufhebung der Abordnung","Einstellung","Versetzung","Sonstige"]]></dmn:text>
+</dmn:inputValues>
+      </dmn:input>
+      <dmn:output id="output1" label="Mitarbeiter" name="mitarbeiter" typeRef="string">
+        <dmn:outputValues id="UnaryTests_17uwrrr">        <dmn:text><![CDATA["Frau Lehmann","Frau Kapons","Frau Ehrlich"]]></dmn:text>
+</dmn:outputValues>
+      </dmn:output>
+      <dmn:rule id="row-552364181-7">
+        <dmn:inputEntry id="UnaryTests_0pzvnya">        <dmn:text><![CDATA["Abordnung"]]></dmn:text>
+</dmn:inputEntry>
+        <dmn:outputEntry id="LiteralExpression_1hosxzb">        <dmn:text><![CDATA["Frau Lehmann"]]></dmn:text>
+</dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="row-552364181-3">
+        <dmn:inputEntry id="UnaryTests_12oecjw">        <dmn:text><![CDATA["Aus-/Fortbildung"]]></dmn:text>
+</dmn:inputEntry>
+        <dmn:outputEntry id="LiteralExpression_1yzf4ys">        <dmn:text><![CDATA["Frau Kapons"]]></dmn:text>
+</dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="row-552364181-4">
+        <dmn:inputEntry id="UnaryTests_1dgp2mt">        <dmn:text><![CDATA["Aufhebung der Abordnung"]]></dmn:text>
+</dmn:inputEntry>
+        <dmn:outputEntry id="LiteralExpression_0u11dos">        <dmn:text><![CDATA["Frau Lehmann"]]></dmn:text>
+</dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="row-552364181-5">
+        <dmn:inputEntry id="UnaryTests_1s24uds">        <dmn:text><![CDATA["Einstellung"]]></dmn:text>
+</dmn:inputEntry>
+        <dmn:outputEntry id="LiteralExpression_03dsm28">        <dmn:text><![CDATA["Frau Ehrlich"]]></dmn:text>
+</dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="table-299685399-1">
+        <dmn:inputEntry id="UnaryTests_1gbp8t8">        <dmn:text><![CDATA["Versetzung"]]></dmn:text>
+</dmn:inputEntry>
+        <dmn:outputEntry id="LiteralExpression_1nx92zp">        <dmn:text><![CDATA["Frau Ehrlich"]]></dmn:text>
+</dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="row-552364181-6">
+        <dmn:inputEntry id="UnaryTests_0u3bjhh">        <dmn:text><![CDATA["Sonstige"]]></dmn:text>
+</dmn:inputEntry>
+        <dmn:outputEntry id="LiteralExpression_087nquv">        <dmn:text><![CDATA["Frau Lehmann"]]></dmn:text>
+</dmn:outputEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+</dmn:definitions>

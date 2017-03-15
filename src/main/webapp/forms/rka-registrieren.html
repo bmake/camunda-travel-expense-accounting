@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>rka-registrieren</title>
+</head>
+<body>
+
+<form role="form" name="rka-registrierungsform"
+      class="form-horizontal">
+      
+       <div class="form-group">
+    <label class="control-label col-md-4"
+           for="name">Name</label>
+    <div class="col-md-8">
+      <input cam-variable-name="name"
+             cam-variable-type="String"
+             id="name"
+             class="form-control"
+             type="text"
+             required />
+      </div>
+  </div>
+      
+   <div class="form-group">
+    <label class="control-label col-md-4"
+           for="dienstreiseId">Dienstreise ID</label>
+    <div class="col-md-8">
+      <input cam-variable-name="dienstreiseId"
+             cam-variable-type="String"
+			 class="form-control"
+             id="dienstreiseId"
+             name="dienstreiseId"
+             class="form-control"
+             type="text"
+             required />
+      </div>
+	</div>
+	
+	<div class="form-group">
+	    <label class="control-label col-md-4"
+           for="endDate">Ende der Reise</label>
+		<div class="col-md-8">
+		<input type="text"
+		   cam-variable-name="endDate"
+		   cam-variable-type="Date"
+		   id="endDate"
+           name="endDate"
+		   class="form-control"
+		   datepicker-popup="yyyy-MM-dd'T'HH:mm:ss"
+		   is-open="dateFieldOpened2" />
+
+	  <span class="input-group-btn">
+		<button type="button"
+				class="btn btn-default"
+				ng-click="open2($event)">
+		  <i class="glyphicon glyphicon-calendar"></i>
+		</button>
+	  </span>
+
+	</div>
+ 	<script cam-script type="text/form-script">
+	  $scope.open2 = function($event) {
+		  $event.preventDefault(); 
+		 $event.stopPropagation();  
+
+		$scope.dateFieldOpened2 = true;
+	  };
+	</script> 
+	
+	<div class="form-group">
+    <label class="control-label col-md-4"
+           for="dienstreiseId">Reisekostenabrechnung ID</label>
+    <div class="col-md-8">
+      <input cam-variable-name="reisekostenabrechnugId"
+             cam-variable-type="String"
+			 class="form-control"
+             id="reisekostenabrechnugId"
+             name="reisekostenabrechnugId"
+             class="form-control"
+             type="text"
+             required />
+      </div>
+	</div>
+	
+	<div class="form-group">
+    <label class="control-label col-md-4"
+           for="name">Reisekontext ausw&aumlhlen</label>
+    <div class="col-md-8">
+      <select cam-variable-name="reiseKontext"
+             cam-variable-type="String"
+             id="reiseTitel"
+             class="form-control"
+             type="text"
+             required>
+             <option value="Abordnung">Abordnung</option>
+ 			 <option value="Aus-/Fortbildung">Aus-/Fortbildung</option>
+ 			 <option value="Aufhebung der Abordnung">Aufhebung der Abordnung</option>
+ 			 <option value="Versetzung">Versetzung</option>
+ 			 <option value="Einstellung">Einstellung</option>
+ 			 <option value="Sonstige">Sonstige</option>
+             </select>
+      </div>
+  </div> 
+	
+      
+ </form>
+
+</body>
+</html>

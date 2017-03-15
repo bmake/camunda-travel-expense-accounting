@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>ausschlussfristÜberprüfen</title>
+</head>
+<body>
+<form role="form" name="start-form"
+      class="form-horizontal">
+      
+      <div class="form-group">
+	    <label class="control-label col-md-4"
+           for="endDate">Ende der Reise</label>
+		<div class="col-md-8">
+		<input type="text"
+		   cam-variable-name="endDate"
+		   cam-variable-type="Date"
+		   id="endDate"
+           name="endDate"
+		   class="form-control"
+		   readonly =true
+		   datepicker-popup="dd-MM-yyyy'T'HH:mm:ss"
+		   is-open="dateFieldOpened2" />
+		 </div>
+		 </div>
+
+	  
+	
+	<div class="form-group">
+	    <label class="control-label col-md-4"
+           for="ausschlussfrist">Ausschlussfrist</label>
+		<div class="col-md-8">
+		<input type="text"
+		   cam-variable-name="ausschlussfrist"
+		   cam-variable-type="String"
+		   id="ausschlussfrist"
+           name="ausschlussfrist" 
+		   class="form-control"
+		   readonly =true/>
+		 </div>
+ </div>
+		   
+
+	  	 
+	 <script>
+	 
+	 function sample(){
+	 
+	         var monthNames = [
+"01", "02", "03",
+"04", "05", "06", "07",
+"08", "09", "10",
+"11", "12"
+];
+console.log("hehhehehheheheheh");
+var date = new Date();
+
+date.setDate(-180);
+
+var day = date.getDate();
+var monthIndex = date.getMonth();
+var year = date.getFullYear();
+var result = year + '-' + monthNames[monthIndex] + '-' + day+'T00:00:00';
+
+ 
+return result;
+
+	      }
+		     
+		     document.getElementById("ausschlussfrist").value = sample();
+			 
+	 
+	 </script>
+	 
+			
+	
+   
+      
+      
+ <div class="form-group">
+    <label class="control-label col-md-4"
+           for="name">Ausschlussfrist &Uumlberschritten?</label>
+    <div class="col-md-8">
+      <select cam-variable-name="frist"
+             cam-variable-type="Boolean"
+             id="frist"
+             class="form-control"
+             type="text"
+             required>
+             <option value="true">Ja</option>
+ 			 <option value="false">Nein</option>
+             </select>
+      </div>
+</div>  
+
+</form>
+
+
+
+</body>
+</html>

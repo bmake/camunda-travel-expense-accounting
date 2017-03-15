@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Kostenabrechnung</title>
+</head>
+<body>
+
+<form role="form"
+      name="variablesForm">
+
+
+<div class="control-group">
+      <fieldset>
+        <legend>Kostenabrechnung (Betrag*Absatz)</legend>
+		<label class="control-label col-md-4" for="name">Tagegelg (volle 24 Std.)</label>
+        <input type="text" name="wert1" id="wert1" cam-variable-name="wert1" cam-variable-type="Double" onkeyup="form_calculate();"/>
+        <input type="text" name="wert2" value="24.00" id="wert2" cam-variable-name="wert2" cam-variable-type="Double" onkeyup="form_calculate();"/>
+        <input type="text" name="result" id="result" cam-variable-name="result" cam-variable-type="Double" /> 
+		
+		
+		<p> </p>
+		<label class="control-label col-md-4" for="name">Tagegelg (> 8 und < 24 Std.)</label>
+		<input type="text" name="wert3" id="wert3" cam-variable-name="wert3" cam-variable-type="Double" onkeyup="form_calculate();"/>
+		<input type="text" name="wert4" value="12.00" id="wert4" cam-variable-name="wert4" cam-variable-type="Double" onkeyup="form_calculate();"/>
+		<input type="text" name="result2" id="result2" cam-variable-name="result2" cam-variable-type="Double"/>
+		
+		<p> </p>
+		<label class="control-label col-md-4" for="name">Tagegelg</label>
+		<input type="text" name="wert5" id="wert5" cam-variable-name="wert5" cam-variable-type="Double"onkeyup="form_calculate();"/>
+		<input type="text" name="wert6" id="wert6" cam-variable-name="wert6" cam-variable-type="Double" onkeyup="form_calculate();"/>
+		<input type="text" name="result3" id="result3" cam-variable-name="result3" cam-variable-type="Double"/>
+		
+		<p> </p>
+		<label class="control-label col-md-4" for="name">Einbehalt-Fr&uumlhst&uumlck</label>
+		<input type="text" name="wert7" id="wert7" cam-variable-name="wert7" cam-variable-type="Double"onkeyup="form_calculate();"/>
+		<input type="text" name="wert8" value="4.80" id="wert8" cam-variable-name="wert8" cam-variable-type="Double" onkeyup="form_calculate();"/>
+		<input type="text" name="result4" id="result4" cam-variable-name="result4" cam-variable-type="Double"/>
+		
+		<p> </p>
+		<label class="control-label col-md-4" for="name">Einbehalt-Mittagessen</label>
+		<input type="text" name="wert9" id="wert9" cam-variable-name="wert9" cam-variable-type="Double"onkeyup="form_calculate();"/>
+		<input type="text" name="wert10" value="9.60" id="wert10"  cam-variable-name="wert10" cam-variable-type="Double"onkeyup="form_calculate();"/>
+		<input type="text" name="result5" id="result5" cam-variable-name="result5" cam-variable-type="Double"/>
+		
+		<p> </p>
+		<label class="control-label col-md-4" for="name">Einbehalt-Abendessen</label>
+		<input type="text" name="wert11" id="wert11" cam-variable-name="wert11" cam-variable-type="Double" onkeyup="form_calculate();"/>
+		<input type="text" name="wert12" value="9.60"id="wert12" cam-variable-name="wert12" cam-variable-type="Double" onkeyup="form_calculate();"/>
+		<input type="text" name="result6" id="result6" cam-variable-name="result6" cam-variable-type="Double"/>
+		
+		<p> </p>
+		<label class="control-label col-md-4" for="name">&Uumlbernachtungsgeld (pauschal)</label>
+		<input type="text" name="wert13" id="wert13" cam-variable-name="wert13" cam-variable-type="Double" onkeyup="form_calculate();"/>
+		<input type="text" name="wert14" value="20.00" id="wert14" cam-variable-name="wert14" cam-variable-type="Double" onkeyup="form_calculate();"/>
+		<input type="text" name="result7" id="result7" cam-variable-name="result7" cam-variable-type="Double"/>
+
+		<p style="color:white;">&Eumlbernachtungskosten  </p>
+		<label class="control-label col-md-4" for="name">&Uumlbernachtungskosten (SP-3-)</label>
+		<input type="text" name="wert15" id="wert15" cam-variable-name="wert15" cam-variable-type="Double" onkeyup="form_calculate();"/>
+		<input type="text" name="wert16" id="wert16" cam-variable-name="wert16" cam-variable-type="Double" onkeyup="form_calculate();"/>
+		<input type="text" name="result8" id="result8" cam-variable-name="result8" cam-variable-type="Double"/>
+		
+		<p> </p>
+		<label class="control-label col-md-4" for="name">&Uumlbernachtungskosten (SP-3-)</label>
+		<input type="text" name="wert17" id="wert17" cam-variable-name="wert17" cam-variable-type="Double" onkeyup="form_calculate();"/>
+		<input type="text" name="wert18" id="wert18" cam-variable-name="wert18" cam-variable-type="Double" onkeyup="form_calculate();"/>
+		<input type="text" name="result9" id="result9" cam-variable-name="result9" cam-variable-type="Double"/>
+		
+		<p> </p>
+		<label class="control-label col-md-4" for="name">Nebenkosten</label>
+		<input type="text" name="wert25" id="wert25" cam-variable-name="wert25" cam-variable-type="Double" onkeyup="form_calculate();"/>
+		<input type="text" name="wert26" id="wert26" cam-variable-name="wert26" cam-variable-type="Double" onkeyup="form_calculate();"/>
+		<input type="text" name="result13" id="result13" cam-variable-name="result13" cam-variable-type="Double"/>
+		
+		<p> </p>
+		<label class="control-label col-md-4" for="name">Wegstreckenentsch&aumldigung</label>
+		<input type="text" name="wert27" id="wert27" cam-variable-name="wert27" cam-variable-type="Double" onkeyup="form_calculate();"/>
+		<input type="text" name="wert28" value="0.30" id="wert28" cam-variable-name="wert28" cam-variable-type="Double" onkeyup="form_calculate();"/>
+		<input type="text" name="result14" id="result14" cam-variable-name="result14" cam-variable-type="Double"/>
+		
+		<p> </p>
+		<label class="control-label col-md-4" for="name">Wegstreckenentsch&aumldigung</label>
+		<input type="text" name="wert29" id="wert29" cam-variable-name="wert29" cam-variable-type="Double" onkeyup="form_calculate();"/>
+		<input type="text" name="wert30" value="0.20" id="wert30" cam-variable-name="wert30" cam-variable-type="Double" onkeyup="form_calculate();"/>
+		<input type="text" name="result15" id="result15" cam-variable-name="result15" cam-variable-type="Double"/>
+		
+		<p> </p>
+		<label class="control-label col-md-4" for="name">Fahrkosten (SP-1-)</label>
+		<input type="text" name="wert19" id="wert19" cam-variable-name="wert19" cam-variable-type="Double" onkeyup="form_calculate();"/>
+		<input type="text" name="wert20" id="wert20" cam-variable-name="wert20" cam-variable-type="Double" onkeyup="form_calculate();"/>
+		<input type="text" name="result10" id="result10" cam-variable-name="result10" cam-variable-type="Double"/>
+		
+		<p> </p>
+		<label class="control-label col-md-4" for="name">Fahrkosten (SP-1-)</label>
+		<input type="text" name="wert21" id="wert21" cam-variable-name="wert21" cam-variable-type="Double" onkeyup="form_calculate();"/>
+		<input type="text" name="wert22" id="wert22" cam-variable-name="wert22" cam-variable-type="Double" onkeyup="form_calculate();"/>
+		<input type="text" name="result11" id="result11" cam-variable-name="result11" cam-variable-type="Double"/>
+		
+		<p> </p>
+		<label class="control-label col-md-4" for="name">Fahrtauslagen (&Uumlbern.&sect 11 Abs.5)</label>
+		<input type="text" name="wert23" id="wert23" cam-variable-name="wert23" cam-variable-type="Double" onkeyup="form_calculate();"/>
+		<input type="text" name="wert24" value="20.00"id="wert24" cam-variable-name="wert24" cam-variable-type="Double" onkeyup="form_calculate();"/>
+		<input type="text" name="result12" id="result12" cam-variable-name="result12" cam-variable-type="Double"/>
+		
+      </fieldset>
+      <p> </p>
+      <fieldset>
+      <label class="control-label col-md-4" for="summe">  Summe  </label>
+      <input type ="text" name="summe" id="summe"cam-variable-name="summe" cam-variable-type="Double" />Euro
+      </fieldset>
+      
+      <script type="text/javascript">
+      <!--
+        function form_calculate()
+        {
+            // Wert des ersten Feldes auslesen:
+            var wert1         = Number(document.getElementById('wert1').value);
+            // Wert des zeiten Feldes auslesen:
+            var wert2         = Number(document.getElementById('wert2').value);
+            // Das Ergebnisfeld als Object ermittlen, um spaeter das Ergebnis einfuegen zu koennen
+            var resultField   = document.getElementById('result');
+            // Felder zusammen rechnen
+            var result        = wert1*wert2;
+            // Ergebnis ins Ergebnisfeld eintragen
+            resultField.value = result;
+			
+			
+			 // Wert des ersten Feldes auslesen:
+            var wert3         = Number(document.getElementById('wert3').value);
+			// Wert des zeiten Feldes auslesen:
+            var wert4         = Number(document.getElementById('wert4').value);
+			// Das Ergebnisfeld als Object ermittlen, um spaeter das Ergebnis einfuegen zu koennen
+            var resultField2   = document.getElementById('result2');
+            // Felder zusammen rechnen
+            var result2        = wert3*wert4;
+			// Ergebnis ins Ergebnisfeld eintragen
+            resultField2.value = result2;
+			
+			
+            var wert5         = Number(document.getElementById('wert5').value);
+			var wert6         = Number(document.getElementById('wert6').value);
+			var resultField3   = document.getElementById('result3');
+            var result3        = wert5*wert6;
+            resultField3.value = result3;
+			
+			var wert7         = Number(document.getElementById('wert7').value);
+			var wert8         = Number(document.getElementById('wert8').value);
+			var resultField4   = document.getElementById('result4');
+            var result4        = wert7*wert8;
+            resultField4.value = result4;
+			
+			var wert9         = Number(document.getElementById('wert9').value);
+			var wert10         = Number(document.getElementById('wert10').value);
+			var resultField5   = document.getElementById('result5');
+            var result5        = wert9*wert10;
+            resultField5.value = result5;	
+
+			var wert11         = Number(document.getElementById('wert11').value);
+			var wert12         = Number(document.getElementById('wert12').value);
+			var resultField6   = document.getElementById('result6');
+            var result6        = wert11*wert12;
+            resultField6.value = result6;	
+
+			var wert13         = Number(document.getElementById('wert13').value);
+			var wert14         = Number(document.getElementById('wert14').value);
+			var resultField7   = document.getElementById('result7');
+            var result7        = wert13*wert14;
+            resultField7.value = result7;	
+
+			var wert15         = Number(document.getElementById('wert15').value);
+			var wert16         = Number(document.getElementById('wert16').value);
+			var resultField8   = document.getElementById('result8');
+            var result8        = wert15*wert16;
+            resultField8.value = result8;	
+
+			var wert17         = Number(document.getElementById('wert17').value);
+			var wert18         = Number(document.getElementById('wert18').value);
+			var resultField9   = document.getElementById('result9');
+            var result9        = wert17*wert18;
+            resultField9.value = result9;		
+
+			var wert19         = Number(document.getElementById('wert19').value);
+			var wert20         = Number(document.getElementById('wert20').value);
+			var resultField10   = document.getElementById('result10');
+            var result10        = wert19*wert20;
+            resultField10.value = result10;				
+
+			var wert21         = Number(document.getElementById('wert21').value);
+			var wert22         = Number(document.getElementById('wert22').value);
+			var resultField11   = document.getElementById('result11');
+            var result11        = wert21*wert22;
+            resultField11.value = result11;	
+
+			var wert23         = Number(document.getElementById('wert23').value);
+			var wert24         = Number(document.getElementById('wert24').value);
+			var resultField12   = document.getElementById('result12');
+            var result12        = wert23*wert24;
+            resultField12.value = result12;	
+			
+			
+			var wert25         = Number(document.getElementById('wert25').value);
+			var wert26         = Number(document.getElementById('wert26').value);
+			var resultField13   = document.getElementById('result13');
+            var result13        = wert25*wert26;
+            resultField13.value = result13;	
+			
+			var wert27         = Number(document.getElementById('wert27').value);
+			var wert28         = Number(document.getElementById('wert28').value);
+			var resultField14   = document.getElementById('result14');
+            var result14        = wert27*wert28;
+            resultField14.value = result14;				
+
+			var wert29         = Number(document.getElementById('wert29').value);
+			var wert30         = Number(document.getElementById('wert30').value);
+			var resultField15   = document.getElementById('result15');
+            var result15        = wert29*wert30;
+            resultField15.value = result15;				
+			
+			var sumField = document.getElementById('summe');
+			var sum = ( result + result2 + result3 + result4 + result5 + result6 +result7 +result8 + result9 + result10 +result11 + result12 + result13 + result14 + result15);
+			sumField.value = sum;
+            
+        }
+      -->
+    </script>
+       
+			
+        </div>
+	
+
+
+</form>
+
+</body>
+</html>
+
